@@ -14,7 +14,7 @@ namespace Ejercicio.Web.Models
         [Required]
         public string Apellidos { get; set; }
 
-        [MaxLength(50, ErrorMessage = "El campo {0} debe contener al menos un caracter")]
+      
         [Required]
         public int Documento { get; set; }
 
@@ -22,7 +22,6 @@ namespace Ejercicio.Web.Models
         [Required]
         public string Direccion { get; set; }
 
-        [MaxLength(50, ErrorMessage = "El campo {0} debe contener al menos un caracter")]
         [Required]
         public int Telefono { get; set; }
 
@@ -31,11 +30,10 @@ namespace Ejercicio.Web.Models
         [EmailAddress]
         public string Correo { get; set; }
 
-        [MaxLength(50, ErrorMessage = "El campo {0} debe contener al menos un caracter")]
         [Required]
         public int Grado { get; set; }
 
-        [MaxLength(50, ErrorMessage = "El campo {0} debe contener al menos un caracter")]
+   
         [Required]
         public int Edad { get; set; }
     }

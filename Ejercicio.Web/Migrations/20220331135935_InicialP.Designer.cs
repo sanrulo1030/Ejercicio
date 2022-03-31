@@ -4,6 +4,7 @@ using Ejercicio.Web.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Ejercicio.Web.Migrations
 {
     [DbContext(typeof(EjercicioDbContext))]
-    partial class EjercicioDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220331135935_InicialP")]
+    partial class InicialP
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -49,12 +51,15 @@ namespace Ejercicio.Web.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<int>("Documento")
+                        .HasMaxLength(50)
                         .HasColumnType("int");
 
                     b.Property<int>("Edad")
+                        .HasMaxLength(50)
                         .HasColumnType("int");
 
                     b.Property<int>("Grado")
+                        .HasMaxLength(50)
                         .HasColumnType("int");
 
                     b.Property<int?>("MunicipioId")
@@ -66,6 +71,7 @@ namespace Ejercicio.Web.Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<int>("Telefono")
+                        .HasMaxLength(50)
                         .HasColumnType("int");
 
                     b.HasKey("Id");
